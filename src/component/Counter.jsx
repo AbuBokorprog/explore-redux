@@ -1,8 +1,8 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {
-  increment,
   decrement,
+  increment,
   incrementByValue,
 } from "../redux/features/counter/counterSlice";
 
@@ -13,21 +13,21 @@ const Counter = () => {
     <div className="flex justify-evenly">
       {/* increment by 5 */}
       <button
-        onClick={() => dispatch(() => dispatch(incrementByValue(5)))}
         className="px-5 py-2 bg-green-400 rounded-md"
+        onClick={() => dispatch(incrementByValue(5))}
       >
         Increment by 5
       </button>
       <button
-        onClick={() => dispatch(increment())}
         className="px-5 py-2 bg-green-400 rounded-md"
+        onClick={() => dispatch(increment())}
       >
         Increment
       </button>
       <h1>{value}</h1>
       <button
-        onClick={() => dispatch(decrement())}
         className="px-5 py-2 bg-red-400 rounded-md"
+        onClick={() => dispatch(decrement())}
       >
         Decrement
       </button>
