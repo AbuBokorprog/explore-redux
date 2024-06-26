@@ -8,7 +8,9 @@ import {
 
 const Counter = () => {
   const { value } = useSelector((state) => state.counter);
+
   const dispatch = useDispatch();
+
   return (
     <div className="flex justify-evenly">
       {/* increment by 5 */}

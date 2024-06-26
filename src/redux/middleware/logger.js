@@ -1,6 +1,6 @@
 export const logger = (state) => (next) => (action) => {
-  console.log("currentState =>", state.getState());
-  console.log("action =>", action);
+  console.log("current state --->", state.getState());
+  console.log("action --->", action);
   next(action);
-  console.log("updated =>", state.getState());
+  console.log("next state --->", state.getState());
 };
